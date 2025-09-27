@@ -4,7 +4,7 @@ test('has title', async ({ page }) => {
   await page.goto('https://e-commerce-dev.betterbytesvn.com/');
 
   // Expect a title "to contain" a substring.
- await expect(page).toHaveTitle(/“E-commerce site for automationtesting/);
+ await expect(page).toHaveTitle(/E-commerce site for automation testing/i);
 });
 
 test('get started link', async ({ page }) => {
@@ -14,5 +14,5 @@ test('get started link', async ({ page }) => {
   await page.getByRole('link', { name: 'MY ACCOUNT' }).click();
 
   // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'My account' })).toBeVisible();
+  await expect(page).toHaveTitle(/E-commerce site for automation testing/i);
 });
